@@ -33,7 +33,7 @@ function preload(){
 
 }
 function setup() {
-  createCanvas(displayWidth-20,displayHeight-110);
+  createCanvas(windowWidth-20,windowWidth-110);
   //bob spawn = 120,600
   bob = createSprite(110,585, 50, 50);
   bob.addImage("bobStandingRight",bobStandingRight);
@@ -154,13 +154,16 @@ function draw() {
 
   }
 
+
   if(noteTaken===true){
+   
     text("YOU CAN TELEPORT THROUGH A CERTAIN WALL BY STANDING BY IT FOR 10 SEC",0,25);
   }
   if(gameState==="Stage3"){
     text("KEY FOUND , NOW ESCAPE",0,55);
   }
   if(hasMoney===true){
+ 
     text("YOU HAVE MONEY , FIND THE LIFT KEY ( HINT: WHERE YOU FIND WOOD BURNING BRIGHT )",0,25);
   }
   if(gameState==="Start" && hasMoney===true){
@@ -261,7 +264,7 @@ function draw() {
   }
 }
 function keyPressed(){
-    if((bob.x>915&&bob.x<1020)&&(bob.y<520&&bob.y>410)&&gameState==="Stage2"&&keyCode===32){
+    if((bob.x>915&&bob.x<1020)&&(bob.y<520&&bob.y>410)&& gameState==="Stage2"&&keyCode===32){
       gameState="Stage3";
       hasMoney=false;
     }
