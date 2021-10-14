@@ -33,7 +33,7 @@ function preload(){
 
 }
 function setup() {
-  createCanvas(windowWidth-20,windowWidth-110);
+  createCanvas(windowWidth,windowWidth);
   //bob spawn = 120,600
   bob = createSprite(110,585, 50, 50);
   bob.addImage("bobStandingRight",bobStandingRight);
